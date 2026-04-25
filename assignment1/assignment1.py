@@ -156,6 +156,8 @@ guess = "ab"
 
 print((hangman(secret, guess)))
 
+print("Go to Task 10")
+
 #Task 10: Pig Latin, Another String Manipulation Exercise
 def pig_latin(text):
     vowels = "aeiou"
