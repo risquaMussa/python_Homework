@@ -12,8 +12,11 @@ names = [
     for row in employees[1:]
 ]
 
+names_with_e = [name for name in names if "e" in name]
+
 
 print(names)
+print(names_with_e)
 
 #append new first and lastname to list
 # new_first_name = input("Enter a new first name: ")
