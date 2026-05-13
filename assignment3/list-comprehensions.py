@@ -8,7 +8,7 @@ with open('../csv/employees.csv', newline='') as file:
         employees.append(row)
         
 names = [
-    row[0] + " " + row[1]
+    row[1] + " " + row[2]
     for row in employees[1:]
 ]
 

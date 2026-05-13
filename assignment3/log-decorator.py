@@ -5,10 +5,7 @@ logger = logging.getLogger(__name__ + "_parameter_log")
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.FileHandler("./decorator.log","a"))
 
-#getLogger(...) returns a logger with the specified name, creating it if necessary. The name is a dot-separated hierarchical name, which is used to determine the logger's position in the logger hierarchy. If no name is specified, the root logger is returned.
 
-# To write a log record:
-logger.log(logging.INFO, "this string would be logged")
 
 def logger_decorator(func):
     def wrapper(*args, **kwargs):
@@ -17,6 +14,12 @@ def logger_decorator(func):
             logger.info(f"positional parameters: {args}")
         else:
             logger.info("positional parameters: none")
+            
+        if kwargs:
+            logger.info(f"keyword parameters: {kwargs}")
+        else:
+            logger.info("keyword parameters: none")
+
         result = func(*args, **kwargs)
     
         logger.info(f"return: {result}")
@@ -42,8 +45,9 @@ def variable_args(*args):
 
 @logger_decorator
 def keyword_args(**kwargs):
+    return kwargs
                   
-    return logger_decorator
+
 
 print(hello())
 print(add(3, 5))
