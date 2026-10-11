@@ -5,3 +5,4 @@
 print("This week I learned how to use the terminal.")
 print("I learned how to navigate folders using CLI commands.")
 print("I learned how to create Git branches and commits.")
+
