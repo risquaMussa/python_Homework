@@ -1,7 +1,7 @@
 day = input("What day is it?").strip().lower()
 time_of_day = input("What time of day? ").strip().lower()
 
-if day == "Tuesday":
+if day == "tuesday":
     if time_of_day == "morning":
         print("Suggestion: Morning Python class — great time to focus!")
     elif time_of_day == "afternoon":
@@ -10,7 +10,7 @@ if day == "Tuesday":
         print("Suggestion: Take a walk for some fresh air!")
     else:
         print("Sorry, I don't recognize that time. Try morning, afternoon, or evening.")
-elif day == "Thursday":
+elif day == "thursday":
      if time_of_day == "morning":
             print("Suggestion: Enjoy a relaxing breakfast!")
      elif time_of_day == "afternoon":
